@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+</head>
+<body>
+    <div class="container">
+            <form action="/doEdit" method="POST" role="form">
+                <legend>编辑页面</legend>
+                <input type="hidden" name="_id" value="{{data._id}}">
+            <!-- name  方便后端去获取数据 -->
+                <div class="form-group">
+                    <label for="">用户名:name</label>
+                    <input type="text" name="name" class="form-control" id="user" value="{{data.name}}" placeholder="请输入用户名">
+                </div>
+                <div class="form-group">
+                    <label for="">年龄：age</label>
+                    <input type="text" name="age" class="form-control" id="age" value="{{data.age}}" placeholder="请输入用户年龄">
+                </div>  
+                <button type="submit" class="btn btn-primary">确定</button>
+            </form>
+    </div>
+</body>
+</html>
