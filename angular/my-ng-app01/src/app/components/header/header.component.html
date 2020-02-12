@@ -1,0 +1,7 @@
+<p>header works!</p>
+<div *ngFor="let item of arr">{{item.name}}</div>
+<div *ngIf="isShow">哈罗</div>
+<img [src]="imageUrl" alt="">
+<p (click)="handleClick()">{{msg}}</p>
+<!-- <input type="text" (keyup)="handleEnter($event)"> -->
+<input #box type="text" (keyup.enter)="handleEnter(box.value)">

@@ -1,0 +1,7 @@
+<p>header works!</p>
+<!-- <input type="text" [(ngModel)]="msg" (ngModelChange)="handleChange($event)">
+<p>{{msg}}</p> -->
+<input type="checkbox" [(ngModel)]="checked" (ngModelChange)="handleChange()">
+<div *ngFor="let item of cartList">{{item.productName}}</div>
+<button nz-button nzType="primary">Primary</button>
+<p>{{title}}</p>
