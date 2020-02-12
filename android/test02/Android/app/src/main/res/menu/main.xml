@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:icon="@drawable/sao"
+    android:id="@+id/sao"
+    android:title="扫一扫"
+    />
+    <item
+        android:icon="@drawable/add"
+        android:id="@+id/add"
+        android:title="添加朋友"
+        />
+</menu>
