@@ -1,0 +1,18 @@
+.icon{
+    width:36rpx;
+    height: 36rpx;
+}
+.item{
+    position: relative;
+    margin-top: 20px;
+    width:220rpx;
+    border:1px solid #333;
+    font-size: 28rpx;
+}
+.item .bg{
+    width:220rpx;
+    height: 220rpx;
+}
+text{
+    height: 100rpx;
+}

@@ -1,0 +1,5 @@
+<view class="container">
+  <image src="{{logo}}" />
+  <view class="name">{{name}}</view>
+  <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGetUserInfo">获取用户信息</button>
+</view>

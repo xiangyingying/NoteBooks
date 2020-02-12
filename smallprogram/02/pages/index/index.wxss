@@ -1,0 +1,14 @@
+.container{
+  color: red;
+}
+.container a{
+  color: pink;
+}
+input{
+  border: 1px solid #333;
+  width: 200px;
+}
+image{
+  width: 120rpx;height: 120rpx;
+  border-radius: 50px;
+}

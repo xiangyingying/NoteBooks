@@ -1,0 +1,17 @@
+.App{
+  color: red;
+}
+img{
+  width: 200px;height: 250px;
+}
+.item{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.title{
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

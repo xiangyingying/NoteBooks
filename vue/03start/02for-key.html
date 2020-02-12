@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+</head>
+<body>
+    <!-- key关键字，key值最好为id,为Index,如果从前面添加数据，则会打乱原来的数据 -->
+    <div id="app">
+        <p v-for="(item,index) of arr" :key="item.id"><input type="checkbox" />{{item.name}}{{index}}</p>
+    </div>
+    <script>
+       var vm=new Vue({
+           el:"#app",
+           data(){
+                return {
+                    arr:[
+                        {id:001,name:"华为"},
+                        {id:002,name:"苹果"},
+                        {id:003,name:"小米"}
+                    ]
+                }
+           }
+       })
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+    <script src="https://cdn.bootcss.com/axios/0.19.0/axios.js"></script>
+</head>
+<body>
+    <!-- v-model实现双向数据绑定
+         @keyup.enter  可以触发enter -->
+    <div id="app">
+        <input type="text" v-model="keyword" @keyup.enter="handleUp">{{keyword}}
+    </div>
+    <script>
+        var vm=new Vue({
+            el:"#app",
+            data(){
+                return{
+                    keyword:"成都"
+                }
+            },
+            methods: {
+                handleUp(e){
+                    console.log(this.keyword)
+                    var url=`https://music.aityp.com/search?keywords=${this.keyword}`;
+                    axios.get(url).then(res=>{
+                        console.log(res)
+                    })
+                }
+            },
+        })
+    </script>
+</body>
+</html>

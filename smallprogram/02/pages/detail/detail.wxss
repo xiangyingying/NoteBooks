@@ -1,0 +1,4 @@
+/* pages/detail/detail.wxss */
+.container{
+    color: orange;
+}

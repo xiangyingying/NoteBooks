@@ -1,0 +1,10 @@
+.icon{
+  top:3rpx;
+  right:30rpx;
+  color:#fff;
+  position: absolute;
+}
+.icon image{
+  width:36rpx;
+  height: 36rpx;
+}

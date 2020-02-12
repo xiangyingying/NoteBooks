@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div>
+            姓名：<input type="text" v-model="name">
+            年龄：<input type="text" v-model="age">
+            <button @click="handleAdd">添加</button>
+            
+        </div>
+        <div>
+            <p v-for="item of arr">{{item.name}}:{{item.age}} <button @click="handleDelete(item.name)">删除</button></p>
+        </div>
+    </div>
+    <script>
+      new Vue({
+          el:"#app",
+            data(){
+                return {
+                    arr:[
+                        {name:"lisi",age:18}
+                    ],
+                    name:"",
+                    age:"",
+                }
+            },
+            methods: {
+                handleAdd(){
+                   if(this.name && this.age){
+                    this.arr.push({
+                      name:this.name,
+                      age:this.age
+                   })
+                   this.name="",
+                   this.age=""
+                   }
+                },
+                handleDelete(name){
+                   var index=this.arr.findIndex(item=>item.name==name)
+                   this.arr.splice(index,1)
+                }
+            },
+      })
+    </script>
+</body>
+</html>

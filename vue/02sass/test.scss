@@ -1,0 +1,60 @@
+$bg:red;
+div{
+    background: $bg;
+}
+/* 嵌套 */
+.container{
+    background:red;
+    .child{
+        font-size: 12px;
+    }
+    &:hover{
+        color: yellow;
+    }
+}
+/* 3.minix */
+@mixin  wh() {
+    width: 100px;
+    height: 100px;
+}
+.one{
+    @include wh()
+}
+/* 4.继承 */
+.block{
+    width: 200px;
+    height: 200px;
+}
+.nav{
+    @extend .block
+}
+/* if-else */
+@mixin v-h($b:true) {
+    @if $b{
+        display: block;
+    }
+    @else{
+        display: none;
+    }
+}
+.visible{
+    @include v-h()
+}
+.hidden{
+    @include v-h(flase)
+}
+/* 6.for */
+@for $i from 1 through 12 {
+    .col-#{$i}{
+        width: 100%/12*$i;
+    }
+}
+/* 7.while */
+$n:12;
+@while $n>0 {
+    .col-md-#{$n}{
+        width:100%/12*$n
+    }
+    $n:$n-1
+}
+

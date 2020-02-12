@@ -1,0 +1,31 @@
+<!-- <view class="container">
+ <view class="item">
+  <v-item data="热门歌曲">
+    <text slot="icon">+</text>  
+  </v-item>
+  <v-item item="新歌首发"></v-item>
+ </view>
+ <view class="item">
+  <v-item data="新碟上架">
+    <text slot="icon">+</text>
+  </v-item>
+  <v-item item="新歌首发"></v-item>
+ </view>
+ <view class="item">
+  <v-item data="新碟">
+    <text slot="icon">+</text>
+  </v-item>
+  <v-item item="新歌"></v-item>
+ </view>
+</view> -->
+<view class="container">
+    <v-item data="热门歌曲" bind:tap="handleClick">
+      <image slot="icon" src="/images/icons/recmd@2x.png"></image>
+    </v-item>
+    <v-item data="最新音乐">
+      <image slot="icon" src="/images/icons/newest@2x.png"></image>
+    </v-item>
+    <v-item data="主播电台">
+      <image slot="icon" src="/images/icons/radio@2x.png"></image>
+    </v-item>
+</view>

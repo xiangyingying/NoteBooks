@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/music/music",
+    "pages/mv/mv",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#3785F9",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/music/music",
+        "text": "音乐",
+        "iconPath": "/images/tabBar/music.png",
+        "selectedIconPath": "/images/tabBar/selected-music.png"
+      },
+      {
+        "pagePath": "pages/mv/mv",
+        "text": "MV",
+        "iconPath": "/images/tabBar/mv.png",
+        "selectedIconPath": "/images/tabBar/selected-mv.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,11 @@
+image{
+    width: 200rpx;height: 200rpx;
+}
+.container-playlists,.container-banner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+.item{
+    width: 200rpx;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name=referrer content=never>
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+    <script src="https://cdn.bootcss.com/axios/0.19.0-beta.1/axios.js"></script>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.css" rel="stylesheet">
+    <style>
+        tbody img{
+            width: 70px;height: 100px;
+            margin-right: 10px;
+        }
+        .count input{
+            width:50px;
+        }
+        button{
+            background: red;
+            border: none;
+            border-radius: 5px;
+            width: 70px;height: 40px;
+            color: white;
+            outline: none;
+        }
+        .produce{
+            display: flex;
+            align-items: center;
+        }
+       /*  .col{
+            text-align: right;
+        } */
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h2 class="text-center text-success">购物车</h2>
+        
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>全选 <input type="checkbox" v-model="checkAll" @change="selectAll"></th>
+                    <th>商品</th>
+                    <th>单价</th>
+                    <th>数量</th>
+                    <th>小计</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr v-for="item of products"> 
+                    <td>
+                        <input type="checkbox" v-model="item.isSelected" @change="selected(item.isSelected)">
+                    </td>
+                    <td class="produce">
+                        <img :src="item.productCover" alt="">
+                        <span>{{item.productName}}</span>
+                    </td>
+                    <td>
+                        <div>{{item.productPrice}}</div>
+                    </td>
+                    <td class="count">
+                        <input type="number" min="1" v-model.number="item.productCount">
+                    </td>
+                    <td>
+                        <div>{{item.productPrice*item.productCount | format(2)}}</div>
+                    </td>
+                    <td>
+                        <button>删除</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>求和</td>
+                    <td></td>
+                    <td>34</td>
+                    <td>34</td>
+                    <td>34</td>
+                </tr>
+                
+            </tbody>
+            
+        </table>
+        <p>总和:{{sum() | format(2)}}</p>
+        
+    </div>
+    <script>
+        var vm=new Vue({
+            el:"#app",
+            data:{
+                products:[],
+                checkAll:false,
+            },
+            mounted() {
+                axios.get('http://yapi.demo.qunar.com/mock/34830/vue').then(res=>{
+                  return this.products=res.data
+                  this.products.forEach(item=>item.isSelected=false)
+                  }) 
+                  
+                  this.selected()
+            },
+            filters:{
+                format(val,params){
+                    return "$"+val.toFixed(params)
+                }
+            },
+            methods: {
+                selectAll(){          
+                    this.products.forEach(item=>item.isSelected=this.checkAll)
+                },
+                selected(val){
+                    var val=this.products.every(item=>item.isSelected)
+                    this.checkAll=val
+                },
+                sum(){
+                    var total=0;
+                    this.products.forEach(item=>{
+                        total=item.productPrice*item.productCount+total;
+                    })
+                    return total
+                }
+            },
+        })
+    </script>
+</body>
+</html>

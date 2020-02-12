@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{this.firstName+this.lastName}}
+    </div>
+    <script>
+       var vm=new Vue({
+           el:"#app",
+           data(){
+               return{
+                   firstName:"xiangyingying",
+                   lastName:"wangsiman"
+               }
+           },
+           /* 当参与计算的值发生改变时，总值会改变 */
+           computed: {
+               total(){
+                   return this.firstName+this.lastName
+               }
+           },
+       })
+    </script>
+</body>
+</html>

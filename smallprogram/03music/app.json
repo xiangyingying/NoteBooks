@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/test/test",
+    "pages/mv/mv",
+    "pages/mvPlay/mvPlay",
+    "pages/list/list"
+   ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor":"#c20c0c",
+    "navigationBarTitleText": "网易云音乐",
+    "navigationBarTextStyle": "black"
+  },
+  "requiredBackgroundModes":["audio",
+  "location"],
+  "sitemapLocation": "sitemap.json",
+
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "音乐",
+        "iconPath":"/images/selected-music.png",
+        "selectedIconPath": "/images/music.png"
+      },
+      {
+        "pagePath": "pages/mv/mv",
+        "text": "MV",
+        "iconPath":"/images/selected-mv.png",
+        "selectedIconPath": "/images/mv.png"
+      }
+    ]
+  }
+  
+}

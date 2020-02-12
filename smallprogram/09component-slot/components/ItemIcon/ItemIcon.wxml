@@ -1,0 +1,9 @@
+<!-- <slot name="icon"></slot>
+<view>{{data}}</view>
+<view>{{item}}</view> -->
+<view>
+    <slot name="icon"></slot>
+    <text>{{data}}</text>
+    <text>更多></text>
+</view>
+    

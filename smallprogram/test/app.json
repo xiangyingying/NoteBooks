@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/music/music",
+    "pages/mv/mv"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  
+  "sitemapLocation": "sitemap.json"
+}

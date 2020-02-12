@@ -1,0 +1,9 @@
+<!-- index.wxml -->
+<view class="container-grid">
+  <v-item wx:for="{{musics}}" data="{{item}}" wx:key="{{item.id}}"
+     bind:toggle="handleToggle"
+     index="{{index}}"
+  >
+    <view slot="icon" class="icon"><image  src="/images/p0.png"></image>{{item.playCount}}</view>
+  </v-item>
+</view>

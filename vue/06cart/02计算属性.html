@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        价格：<input type="number" min="1" v-model.number="price" />
+        数量：<input type="number" min="1" v-model.number="count" />
+        总价：{{total}}
+    </div>
+    <script>
+        var vm=new Vue({
+            el:"#app",
+            data:{
+                price:"",
+                count:""
+            },
+            /* 计算属性 */
+            computed: {
+                total(){
+                    return this.price*this.count
+                }
+            },
+        })
+    </script>
+</body>
+</html>

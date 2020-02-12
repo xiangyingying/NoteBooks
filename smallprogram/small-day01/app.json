@@ -1,0 +1,18 @@
+{
+  "window": {
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "我的第一个小程序",
+    "navigationStyle": "default",
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "dark",
+    "backgroundColorTop": "#ffffff",
+    "backgroundColorBottom": "#ffffff",
+    "enablePullDownRefresh": true
+  },
+  "pages": [
+    "pages/index/index",
+    "pages/detail/detail"
+  ],
+  "sitemapLocation": "sitemap.json"
+}
