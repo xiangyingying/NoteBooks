@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tab 1
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 1</ion-title>
+      
+    </ion-toolbar>
+  </ion-header>
+  <ion-button [routerLink]="['/detail']" routerLinkActive="router-link-active" >
+    跳转detail
+  </ion-button>
+  <app-explore-container name="Tab 1 page"></app-explore-container>
+</ion-content>
