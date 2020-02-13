@@ -1,0 +1,10 @@
+<p>login works! </p>
+<input #phone placeholder="phone number">
+<button (click)="callPhone(phone.value)">Call</button>
+<h1>{{currentTime | date:'yyyy-MM-dd HH:mm:ss'}}</h1>
+<p>{{123 |  currency}}</p>
+<p>{{123 |  currency:'￥'}}</p>
+<p>{{{name:'jack'} | json}}</p>
+<p>{{ 'Hello' | uppercase  }}</p>
+<p>{{ 'Hello' | lowercase  }}</p>
+<div>{{"123"|msgformat}}</div>

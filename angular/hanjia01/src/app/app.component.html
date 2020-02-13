@@ -1,5 +1,6 @@
-<span>{{title}}</span>
-<span>{{count}}</span>
-<button (click)="increment()">加一</button>
+<!-- <h3>{{count}}</h3>
+<button (click)="increment()">count++</button>
+ -->
+<a routerLink="/foo" routerLinkActive="active">来到foo</a>
+<a routerLink="/login/5" [queryParams]="{name: 'zhangsan'}" routerLinkActive="active">来到login</a>
 <router-outlet></router-outlet>
-<app-foo></app-foo>

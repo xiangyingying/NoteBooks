@@ -1,2 +1,53 @@
 <p>foo works!</p>
-<p>goo {{message}}</p>
+<p>Message:{{msg}}</p>
+<p [innerHTML]="msg"></p>
+<img src="{{img}}" alt="">
+<img [src]="img" alt="">
+<img bind-src="img" alt="">
+<button [disabled]="isBtn">Button</button>
+<p>1+1={{1+1}}</p>
+<p>{{num+1}}</p>
+<p>{{title.split('').reverse().join('')}}</p>
+<p>heros</p>
+<ul>
+    <li id="'list-'+hero" *ngFor="let hero of heros;let i=index" >
+     {{i+1}}   {{ hero }}></li>
+</ul>
+<div [class.hidden]="!isShow">show</div>
+<div [class.hidden]="isShow">hidden</div>
+<div [style.display]="isShow?'block':'none'">show</div>
+<div [style.display]="isShow?'none':'block'">hidden</div>
+<div [ngSwitch]="currentHero">
+    <div *ngSwitchCase="'Windstorm'">Windstorm</div>
+    <div *ngSwitchCase="'Bombasto'">Bombasto</div>
+    <div *ngSwitchCase="'Magneta'">Magneta</div>
+    <div *ngSwitchDefault>Tornado</div>
+  </div>
+  <button (click)="onClick($event,12)">按钮</button>
+  <p>{{message}}</p>
+  <button (click)="message='hiehei'">内联</button>
+  <input [value]="message"
+  (input)="message=$event.target.value"
+  >
+<input type="text" [(ngModel)]="message">
+<textarea  cols="30" rows="10" [(ngModel)]="message"></textarea>
+<input type="checkbox" name="" id="" [(ngModel)]="right"> 
+<input type="radio" [value]='1'[(ngModel)]="girl">女
+<input type="radio" [value]='2'[(ngModel)]="girl">男
+<p>选择：{{girl}}</p>
+<select [(ngModel)]="hobby">
+    <option [value]="0">吃饭</option>
+    <option [value]="1">睡觉</option>
+    <option [value]="2">打豆豆</option>
+  </select>
+  <p>选中的爱好：{{ hobby }}</p> -->
+  <div class="bad curly special">Bad curly special</div>
+  <div class="bad curly special"
+  [class]="badCurly">Bad curly</div>
+ <div [ngClass]="{'special':true,'savebale':true}">hiclass</div>
+  <div [ngClass]="currentClasses">curretnClass</div>
+  <button [style.font-size.em]="isSpecial ? 3 : 1" >Big</button>
+  <button [style.font-size.%]="!isSpecial?150:50">small</button>
+  <div [ngStyle]="currentStyles">
+    italic
+  </div>
